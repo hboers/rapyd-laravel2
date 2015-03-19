@@ -75,9 +75,6 @@ class Widget
     {
         $match_url = trim(parse_url($url, PHP_URL_PATH),'/');
         
-        if (Request::path()!= $match_url) {
-            $url = Persistence::get($match_url, parse_url($url, PHP_URL_QUERY));
-        }
 
 
         $attributes = array_merge(array("class"=>"btn btn-default"), $attributes);
